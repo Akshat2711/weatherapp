@@ -1,38 +1,122 @@
-.App {
+body {
+  background-color: rgb(0, 0, 0);
+  color: antiquewhite;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.weather_info {
+  text-align: center;
+  width: 18%;
+  border-radius: 15px;
+  background-color: rgb(44, 44, 44);
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.1);
+
+  h3 {
+    color: azure;
+    font-size: large;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: medium;
+    margin: 5px 0;
+  }
+}
+
+.parent_div {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: transparent;
+}
+
+.current_day {
+  width: 90%;
+  margin: 50px auto;
+  background-color: rgb(33, 33, 33);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+  gap: 20px; /* Add space between grid items */
+}
+
+.current_day h3 {
+  grid-column: span 3; /* Make the date span across 3 columns */
+  font-size: 6vh;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+  
+}
+
+.current_day .temperature {
+  font-size: 5vh; /* Larger font for temperature */
+  font-weight: bold;
+  color: orange;
+}
+
+.current_day p {
+  font-size: 3vh; /* Increase font size for better visibility */
+  margin: 10px 0;
+
+}
+
+.current_day .icon {
+ 
+  font-size: 4vh; /* Increase size of weather icons */
+  color: lightblue;
+}
+
+h1 {
+  background-color: rgb(66, 66, 66);
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: -0.3vh;
+  color: black;
+  font-size: 5vh;
+}
+
+input[type="text"] {
+  margin-top: 2vh;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: black;
+  font-size: 3vh;
+  border: 1px solid rgba(226, 226, 226, 0.5);
+  border-radius: 15px;
+  color: aliceblue;
+  padding: 1.5vh;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  font-size: 4vh;
+  color: aliceblue;
+  position: fixed;
+  top: 0;
+  margin-left: 1vw;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.loading {
+  text-align: center;
+  color: orange;
+  font-size: 3vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.error {
+  text-align: center;
+  color: red;
+  font-size: 3vh;
 }
